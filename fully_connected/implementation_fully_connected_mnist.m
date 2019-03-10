@@ -17,7 +17,7 @@ train_x = bsxfun(@rdivide, train_x, train_sigma);%每个样本分别除以标准差
 test_x = bsxfun(@minus, test_x, train_mean);
 test_x = bsxfun(@rdivide, test_x, train_sigma);
 
-architeture = [784 100 10];%设定网络结构，输入784， 隐含层100，输出10
+architeture = [784 100 10];%设定网络结构，输入784， 隐含层100，输出10, 必须保证输入层为784，输出层为10
 n = numel(architeture);
 
 train_test_flag = 'test';
@@ -32,7 +32,7 @@ if strcmp(train_test_flag, 'train') == 1
     end
 
     learningRate = 0.001; %学习率
-    numepochs = 1;    %训练几遍
+    numepochs = 5;    %训练几遍
     batchsize = 50;  %每次训练50个数据
 
     m = size(train_x, 1);       %数据总量
