@@ -1,2 +1,3 @@
 # Implementation_Deep_learning
-My implementations of the course Stanford CS230n.
+---
+实现了一些常用深度学习方法。
